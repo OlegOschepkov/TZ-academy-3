@@ -1,0 +1,36 @@
+.font (@size, @weight, @height) {
+  font-family: @font;
+  font-size: ~"@{size}px";
+  font-weight: @weight;
+  line-height: ~"@{height}px";
+}
+
+.square(@value) {
+  height: @value;
+  width: @value;
+}
+
+.background(@value1: center, @value2: center) {
+  background-position: @value1 @value2;
+  background-repeat: no-repeat;
+}
+
+
+.reset {
+  margin: 0;
+  padding: 0;
+}
+
+.white-triangle(@top, @left) {
+  position: absolute;
+  content: "";
+  // .square(40px);
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid @backGrey;
+  display: block;
+  top: @top;
+  left: @left;
+}
